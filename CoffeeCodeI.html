@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Caja de Cafetería</title>
+
+    <link rel="stylesheet" href="CoffeCodel.css">
+</head>
+<body>
+
+    <main class="contenedor">
+        <h1>Caja de la Cafetería</h1>
+
+        <section class="seccion-formulario">
+            <h2>Agregar pedido</h2>
+
+            <form id="formularioPedido" class="formulario">
+                <div class="campo">
+                    <label for="producto">Producto</label>
+                    <input
+                        type="text"
+                        id="producto"
+                        placeholder="Ejemplo: Café americano"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="precio">Precio</label>
+                    <input
+                        type="number"
+                        id="precio"
+                        placeholder=""
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="cantidad">Cantidad</label>
+                    <input
+                        type="number"
+                        id="cantidad"
+                        placeholder="Ejemplo: 2"
+                        min="1"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn-agregar">
+                    Agregar pedido
+                </button>
+            </form>
+        </section>
+
+        <section class="seccion-pedidos">
+            <h2>Lista de pedidos</h2>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaPedidos">
+                        <tr>
+                            <td colspan="5" class="mensaje-vacio">
+                                No hay pedidos registrados
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="total">
+                Total: $<span id="totalAcumulado">0.00</span>
+            </div>
+
+            <button id="btnLimpiar" class="btn-limpiar">
+                Limpiar todos los pedidos
+            </button>
+        </section>
+    </main>
+
+    <script src="CoffeCodel.js"></script>
+</body>
+</html>

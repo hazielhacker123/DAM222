@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #f4eee8;
+    color: #3e2723;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #6d4c41;
+}
+
+h2 {
+    margin-top: 25px;
+    padding-bottom: 8px;
+    color: #795548;
+    border-bottom: 2px solid #d7ccc8;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 15px;
+    align-items: end;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: bold;
+    color: #5d4037;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #bcaaa4;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #795548;
+    box-shadow: 0 0 4px rgba(121, 85, 72, 0.5);
+}
+
+button {
+    padding: 12px 16px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-agregar {
+    background-color: #795548;
+}
+
+.btn-agregar:hover {
+    background-color: #5d4037;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    color: white;
+    background-color: #8d6e63;
+}
+
+tr:hover {
+    background-color: #fafafa;
+}
+
+.btn-eliminar {
+    padding: 8px 10px;
+    font-size: 13px;
+    background-color: #c62828;
+}
+
+.btn-eliminar:hover {
+    background-color: #8e0000;
+}
+
+.mensaje-vacio {
+    padding: 25px;
+    color: #777;
+    text-align: center;
+}
+
+.total {
+    margin-top: 25px;
+    text-align: right;
+    font-size: 25px;
+    font-weight: bold;
+    color: #4e342e;
+}
+
+.btn-limpiar {
+    margin-top: 15px;
+    background-color: #c62828;
+}
+
+.btn-limpiar:hover {
+    background-color: #8e0000;
+}
+
+@media (max-width: 750px) {
+    body {
+        padding: 15px;
+    }
+
+    .contenedor {
+        padding: 20px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-agregar {
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+        font-size: 13px;
+    }
+}
